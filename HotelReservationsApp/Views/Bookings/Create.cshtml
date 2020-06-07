@@ -1,0 +1,175 @@
+﻿@model HotelReservationsApp.Models.Booking
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2 class="text-center
+        ">
+    Create Booking
+</h2>
+
+
+<form method="post"  action="@Url.Action("CreateTestSizeOne", "Bookings")">
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h1>Test size one</h1>
+        <hr />
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <label for="StartDate">start day</label>
+                <input type="text" placehohlder="0 is today" name="StartDate" id="StartDate" required />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <label for="EndDate">end day</label>
+                <input type="text" placehohlder="max days you can stay is 365" name="EndDate" id="EndDate" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <a href="Bookings/Index?id=1">
+                    <input type="button" value="See test cases" />
+                </a>
+                <input type="submit" value="Booking" class="btn btn-default" />
+
+            </div>
+        </div>
+    </div>
+</form>
+
+<form method="post" action="@Url.Action("HotelReservations", "Bookings")">
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal text-center">
+        <h1>Reserve rooms</h1>
+        <hr />
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <label for="StartDate">start day</label>
+                <input type="text" placehohlder="0 is today" name="StartDate" id="StartDate" required />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <label for="EndDate">end day</label>
+                <input type="text" placehohlder="max days you can stay is 365" name="EndDate" id="EndDate" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Booking" class="btn btn-default left" />
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<form method="post" action="@Url.Action("CreateTestSizeThree", "Bookings")">
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h1>Test size three</h1>
+        <hr />
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <label for="StartDate">start day</label>
+                <input type="text" placehohlder="0 is today" name="StartDate" id="StartDate" required />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <label for="EndDate">end day</label>
+                <input type="text" placehohlder="max days you can stay is 365" name="EndDate" id="EndDate" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <a href="Bookings/Index?id=2">
+                    <input type="button" value="See test cases" />
+                </a>
+                <input type="submit" value="Booking" class="btn btn-default" />
+
+            </div>
+        </div>
+    </div>
+</form>
+
+<form method="post" action="@Url.Action("CreateTestSizeThreeDecline", "Bookings")">
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <h1>Test size three decline</h1>
+        <hr />
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <label for="StartDate">start day</label>
+                <input type="text" placehohlder="0 is today" name="StartDate" id="StartDate" required />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <label for="EndDate">end day</label>
+                <input type="text" placehohlder="max days you can stay is 365" name="EndDate" id="EndDate" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <a href="Bookings/Index?id=3">
+                    <input type="button" value="See test cases" />
+                </a>
+                <input type="submit" value="Booking" class="btn btn-default" />
+
+            </div>
+        </div>
+    </div>
+</form>
+<form method="post" action="@Url.Action("CreateTestSizeTwo", "Bookings")">
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h1>Test size two</h1>
+        <hr />
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <label for="StartDate">start day</label>
+                <input type="text" placehohlder="0 is today" name="StartDate" id="StartDate" required />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <label for="EndDate">end day</label>
+                <input type="text" placehohlder="max days you can stay is 365" name="EndDate" id="EndDate" required />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <a href="Bookings/Index?id=4">
+                    <input type="button" value="See test cases" />
+                </a>
+                <input type="submit" value="Booking" class="btn btn-default" />
+
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+}
+
